@@ -1,0 +1,20 @@
+"*":
+  "atom-material-ui":
+    depth: true
+    fonts: {}
+  core:
+    projectHome: "/Users/V/Developer"
+    themes: [
+      "atom-material-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "8375be6d-c500-da63-1ebc-d8dda56a4b35"
+  react: {}
+  welcome:
+    showOnStartup: false

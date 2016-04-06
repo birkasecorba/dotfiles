@@ -1,0 +1,76 @@
+[user]
+    name = Ugur Volkan Gul
+    email = ugurvolkangul@gmail.com
+
+[github]
+    user = ugurvolkangul
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = green
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[diff]
+    renames = true
+    mnemonicprefix = true
+
+[branch]
+    autosetuprebase = always
+    autosetupmerge = true
+
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+    mergeoptions = --no-ff
+
+[push]
+    default = tracking
+
+[commit]
+    verbose = true
+
+[fetch]
+    prune = true
+
+[rerere]
+    enabled = true
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff HEAD
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    # unstage = reset --hard HEAD
+    unstage = !sh -c 'git reset --hard HEAD && git clean -fd'
+    put = push origin HEAD
+    rpo = remote prune origin
+    cob = !sh -c 'git co -b "$0"'
+    cor = !sh -c 'git co -t "$0"'
+    update = !sh -c 'git stash && git pull && git stash pop'
+
+[core]
+    editor = vim
+
+[merge]
+    tool = opendiff
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
