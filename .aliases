@@ -86,5 +86,4 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 # Simple http server shortcut
-alias serve = "python -m SimpleHTTPServer"
-
+alias serve="python -m SimpleHTTPServer"
