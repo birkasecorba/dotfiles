@@ -4,6 +4,9 @@ FIND_UTILS_PATH="$(brew --prefix findutils)"
 export PATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
 export MANPATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
 
+# Set Node PATH
+export NODE_PATH='/usr/local/lib/node_modules'
+
 # Load the shell dotfiles
 for file in ~/.{aliases,functions,bash_prompt}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
