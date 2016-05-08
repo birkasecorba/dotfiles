@@ -5,7 +5,7 @@ export PATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":
 export MANPATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
 
 # Set Node PATH
-export NODE_PATH='/usr/local/lib/node_modules'
+export PATH='$HOME/.npm-packages/bin':$PATH
 
 # Load the shell dotfiles
 for file in ~/.{aliases,functions,bash_prompt}; do
