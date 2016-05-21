@@ -4,8 +4,8 @@ FIND_UTILS_PATH="$(brew --prefix findutils)"
 export PATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
 export MANPATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
 
-# Set Node PATH
-export PATH='$HOME/.npm-packages/bin':$PATH
+# Set npm global CLIs PATH
+export PATH="$HOME/.npm-packages/bin":$PATH
 
 # Load the shell dotfiles
 for file in ~/.{aliases,functions,bash_prompt}; do
@@ -15,9 +15,6 @@ unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
-
-# Append to the Bash history file, rather than overwriting it
-# shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
