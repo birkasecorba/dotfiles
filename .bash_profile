@@ -19,24 +19,28 @@ shopt -s nocaseglob;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-# Sets brew cask options
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# If OS is Mac OS
+if [ "$(uname)" == "Darwin" ]; then
 
-# Brew completion
-if which brew > /dev/null && [ -f "/usr/local/etc/bash_completion.d/brew" ]; then
-	source /usr/local/etc/bash_completion.d/brew;
-fi;
+	# Sets brew cask options
+	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# Add Git completion, Enable tab completion for `g` by marking it as an alias for `git`
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	source /usr/local/etc/bash_completion.d/git-completion.bash;
-	if type _git &> /dev/null; then
-		complete -o default -o nospace -F _git g;
+	# Brew completion
+	if which brew &> /dev/null && [ -f "/usr/local/etc/bash_completion.d/brew" ]; then
+		source /usr/local/etc/bash_completion.d/brew;
 	fi;
+
+	# Add Git completion, Enable tab completion for `g` by marking it as an alias for `git`
+	if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+		source /usr/local/etc/bash_completion.d/git-completion.bash;
+		if type _git &> /dev/null; then
+			complete -o default -o nospace -F _git g;
+		fi;
+	fi;
+
+	# Add tab completion for `defaults read|write NSGlobalDomain`
+	complete -W "$(defaults domains | sed 's/,//g') NSGlobalDomain" defaults;
+
+	# Add tab completion for Applications
+	complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
 fi;
-
-# Add tab completion for `defaults read|write NSGlobalDomain`
-complete -W "$(defaults domains | sed 's/,//g') NSGlobalDomain" defaults;
-
-# Add tab completion for Applications
-complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
