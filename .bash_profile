@@ -43,4 +43,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
 	# Add tab completion for Applications
 	complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
+
+	# Add tab complete for ssh
+	if [ -f $HOME/.ssh/config ]; then
+		complete -W "$(cat $HOME/.ssh/config | grep -w Host | awk '{print $2}')" ssh;
+	fi;
 fi;
