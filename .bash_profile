@@ -9,7 +9,7 @@ export PATH="$HOME/.npm-packages/bin":$PATH
 
 # Load the shell dotfiles
 for file in ~/.{aliases,functions,bash_prompt}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
@@ -22,30 +22,30 @@ shopt -s cdspell;
 # If OS is Mac OS
 if [ "$(uname)" == "Darwin" ]; then
 
-	# Sets brew cask options
-	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+  # Sets brew cask options
+  export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-	# Brew completion
-	if which brew &> /dev/null && [ -f "/usr/local/etc/bash_completion.d/brew" ]; then
-		source /usr/local/etc/bash_completion.d/brew;
-	fi;
+  # Brew completion
+  if which brew &> /dev/null && [ -f "/usr/local/etc/bash_completion.d/brew" ]; then
+    source /usr/local/etc/bash_completion.d/brew;
+  fi;
 
-	# Add Git completion, Enable tab completion for `g` by marking it as an alias for `git`
-	if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-		source /usr/local/etc/bash_completion.d/git-completion.bash;
-		if type _git &> /dev/null; then
-			complete -o default -o nospace -F _git g;
-		fi;
-	fi;
+  # Add Git completion, Enable tab completion for `g` by marking it as an alias for `git`
+  if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    source /usr/local/etc/bash_completion.d/git-completion.bash;
+    if type _git &> /dev/null; then
+      complete -o default -o nospace -F _git g;
+    fi;
+  fi;
 
-	# Add tab completion for `defaults read|write NSGlobalDomain`
-	complete -W "$(defaults domains | sed 's/,//g') NSGlobalDomain" defaults;
+  # Add tab completion for `defaults read|write NSGlobalDomain`
+  complete -W "$(defaults domains | sed 's/,//g') NSGlobalDomain" defaults;
 
-	# Add tab completion for Applications
-	complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
+  # Add tab completion for Applications
+  complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
 
-	# Add tab complete for ssh
-	if [ -f $HOME/.ssh/config ]; then
-		complete -W "$(cat $HOME/.ssh/config | grep -w Host | awk '{print $2}')" ssh;
-	fi;
+  # Add tab complete for ssh
+  if [ -f $HOME/.ssh/config ]; then
+    complete -W "$(cat $HOME/.ssh/config | grep -w Host | awk '{print $2}')" ssh;
+  fi;
 fi;

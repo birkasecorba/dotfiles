@@ -32,17 +32,17 @@ sh osx/time-machine.sh
 ###############################################################################
 #
 for app in "Activity Monitor" \
-					 "cfprefsd" \
-					 "Divvy" \
-					 "Dock" \
-					 "Finder" \
-					 "Google Chrome" \
-					 "Mail" \
-					 "SystemUIServer" \
-					 "System Preferences" \
-					 "Photos" \
-					 "iTerm"; do
-	killall "${app}" &> /dev/null
+           "cfprefsd" \
+           "Divvy" \
+           "Dock" \
+           "Finder" \
+           "Google Chrome" \
+           "Mail" \
+           "SystemUIServer" \
+           "System Preferences" \
+           "Photos" \
+           "iTerm"; do
+  killall "${app}" &> /dev/null
 done
 unset app
 echo "Done. Note that some of these changes require a logout/restart to take effect."
