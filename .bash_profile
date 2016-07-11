@@ -1,8 +1,10 @@
-# Add coreutils && findutils PATH
-CORE_UTILS_PATH="$(brew --prefix coreutils)"
-FIND_UTILS_PATH="$(brew --prefix findutils)"
-export PATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
-export MANPATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
+if which brew &> /dev/null; then
+  # Add coreutils && findutils PATH
+  CORE_UTILS_PATH="$(brew --prefix coreutils)"
+  FIND_UTILS_PATH="$(brew --prefix findutils)"
+  export PATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
+  export MANPATH="$FIND_UTILS_PATH/libexec/gnubin":"$CORE_UTILS_PATH/libexec/gnubin":$PATH
+fi;
 
 # Set npm global CLIs PATH
 export PATH="$HOME/.npm-packages/bin":$PATH
