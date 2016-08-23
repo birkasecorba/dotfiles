@@ -44,7 +44,7 @@ if [ "$(uname)" == "Darwin" ]; then
   complete -W "$(defaults domains | sed 's/,//g') NSGlobalDomain" defaults;
 
   # Add tab completion for Applications
-  complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" killall;
+  complete -W "$(ls /Applications/ | sed 's/.app//g' | sed 's/ /\\ /g')" open killall;
 
   # Add tab complete for ssh
   if [ -f $HOME/.ssh/config ]; then
