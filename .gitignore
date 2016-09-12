@@ -20,3 +20,6 @@ dev
 .npm
 .node-gyp
 blob-store
+
+# Log Files
+*.log
