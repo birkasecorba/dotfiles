@@ -13,13 +13,11 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# Atom settings ignored files/directories
-storage
-compile-cache
-dev
-.npm
-.node-gyp
-blob-store
+# Javascript
+node_modules
 
 # Log Files
 *.log
+
+# private gitconfig
+.gitconfig.private

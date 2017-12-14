@@ -33,7 +33,3 @@ sudo chflags uchg /private/var/vm/sleepimage
 # To revert the changes
 # sudo pmset -a hibernatemode 3
 # sudo chflags nouchg /private/var/vm/sleepimage
-
-# Disable the sudden motion sensor as it’s not useful for SSDs
-# sms - use Sudden Motion Sensor to park disk heads on sudden changes in G force (value = 0/1)
-# sudo pmset -a sms 0 # Couldn't found sms option in pmset

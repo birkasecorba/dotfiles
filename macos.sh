@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -8,23 +12,21 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 ###############################################################################
-# Reconfigures a lot of OSX default settings to generally make the OS better. #
+# Reconfigures a lot of macos default settings to generally make the OS better. #
 ###############################################################################
-sh osx/activity-monitor.sh
-sh osx/app-store.sh
-sh osx/chrome.sh
-sh osx/divvy.sh
-sh osx/finder.sh
-sh osx/flux.sh
-sh osx/general.sh
-sh osx/io.sh
-sh osx/iterm.sh
-sh osx/layout.sh
-sh osx/mail.sh
-sh osx/photos.sh
-sh osx/spotlight.sh
-sh osx/ssd.sh
-sh osx/time-machine.sh
+sh macos/activity-monitor.sh
+sh macos/app-store.sh
+sh macos/chrome.sh
+sh macos/finder.sh
+sh macos/general.sh
+sh macos/io.sh
+sh macos/iterm.sh
+sh macos/layout.sh
+sh macos/mail.sh
+sh macos/photos.sh
+sh macos/spotlight.sh
+sh macos/ssd.sh
+sh macos/time-machine.sh
 
 
 ###############################################################################
@@ -33,7 +35,6 @@ sh osx/time-machine.sh
 #
 for app in "Activity Monitor" \
            "cfprefsd" \
-           "Divvy" \
            "Dock" \
            "Finder" \
            "Google Chrome" \

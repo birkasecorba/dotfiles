@@ -1,9 +1,6 @@
-[user]
-    name = Ugur Volkan Gul
-    email = ugurvolkangul@gmail.com
-
-[github]
-    user = ugurvolkangul
+[include]
+  # For username / creds / etc
+  path = ~/.gitconfig.private
 
 [color]
     ui = auto
