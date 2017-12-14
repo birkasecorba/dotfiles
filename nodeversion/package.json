@@ -1,0 +1,19 @@
+{
+  "name": "nodeversion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "birkasecorba <ugurvolkangul@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^4.0.1",
+    "shelljs": "^0.7.8"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
