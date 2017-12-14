@@ -8,10 +8,11 @@ curl -#L https://github.com/birkasecorba/dotfiles/tarball/master | tar -xzv --ex
 
 ## Usage
 To get dotfiles
-- `./fabulizer.sh`
+- `./setup-symlinks.sh`
 
 To install apps/cli
 - `./brew.sh`
+- `./brew-cask.sh`
 
 To set OSX defaults
-- `./osx.sh`
+- `./macos.sh`
