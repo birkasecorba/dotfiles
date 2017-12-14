@@ -1,0 +1,12 @@
+# env EDITOR=nano crontab -e
+
+#=====================================================================#
+# General                                                             #
+#=====================================================================#
+#  Min  |  Hour  |  Mday  |  Month  |  Wday  |  Command               #
+#=====================================================================#
+   *       *        *        *         *        $HOME/.cron/hourly.sh 2> $HOME/Desktop/error-hourly.log
+   0       0        *        *         *        $HOME/.cron/daily.sh 2> $HOME/Desktop/error-daily.log
+   0       0        *        *         0        $HOME/.cron/weekly.sh 2> $HOME/Desktop/error-weekly.log
+   0       0        1        *         *        $HOME/.cron/monthly.sh 2> $HOME/Desktop/error-monthly.log
+#=====================================================================#

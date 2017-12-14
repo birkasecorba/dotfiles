@@ -7,7 +7,13 @@ curl -#L https://github.com/birkasecorba/dotfiles/tarball/master | tar -xzv --ex
 ```
 
 ## Usage
-To get dotfiles
+Make sure all bash files are executable
+```bash
+cd dotfiles
+find . -type f -name '*.sh' -exec chmod +x {} \;
+```
+
+To prune and setup new symlinks
 - `./setup-symlinks.sh`
 
 To install apps/cli
@@ -16,3 +22,6 @@ To install apps/cli
 
 To set OSX defaults
 - `./macos.sh`
+
+Setup cronjob
+- `cronjob cronjob`
