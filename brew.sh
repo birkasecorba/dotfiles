@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if which brew > /dev/null; then
+  brew update
+  brew upgrade --all
+else
+  echo "Downloading homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.

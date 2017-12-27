@@ -9,6 +9,7 @@
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 ask 'Move auto-generated lines out of .bashrc to .bash_profile before continuing'
+reload
 
 # install the latest longtermsupport version of node
 nvm install --lts

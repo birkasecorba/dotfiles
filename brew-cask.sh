@@ -14,3 +14,7 @@ brew cask install slack
 brew cask install skype
 brew cask install authy
 brew cask install nordvpn
+brew cask flume
+brew cask ticktick
+brew cask visual-studio-code
+
