@@ -19,6 +19,7 @@ To prune and setup new symlinks
 To install apps/cli
 - `./brew.sh`
 - `./brew-cask.sh`
+
 For some programs brew only installs the 'installer' of the program, you need to install them manually from `/usr/local/Caskroom/**`
 
 To set OSX defaults
