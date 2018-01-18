@@ -21,3 +21,5 @@ npm install webpack -g
 npm install svgo -g
 npm install imageoptim-cli -g
 npm install eslint -g
+npm install -g eslint-config-airbnb
+npm install -g eslint-plugin-jsx-a11y
