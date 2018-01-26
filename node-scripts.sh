@@ -23,3 +23,5 @@ npm install imageoptim-cli -g
 npm install eslint -g
 npm install -g eslint-config-airbnb
 npm install -g eslint-plugin-jsx-a11y
+npm install -g eslint-plugin-import
+npm install -g eslint-plugin-react
