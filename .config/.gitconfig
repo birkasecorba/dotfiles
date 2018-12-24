@@ -1,7 +1,7 @@
-[include] # If "gitdir:~/Code/Personal"
+[include]
   path = ~/.gitconfig-personal
 
-[includeIf "gitdir:~/Code/Work"]
+[includeIf "gitdir:~/Code/Work/"]
   path = ~/.gitconfig-work
 
 [color]
