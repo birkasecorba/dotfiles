@@ -19,5 +19,6 @@ node_modules
 # Log Files
 *.log
 
-# private gitconfig
-.gitconfig.private
+# private gitconfig files
+.gitconfig-personal
+.gitconfig-work
