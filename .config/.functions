@@ -45,3 +45,25 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+
+# Determine size of a file or total size of a directory
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh;
+	else
+		local arg=-sh;
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@";
+	else
+		du $arg .[^.]* ./*;
+	fi;
+}
+
+function readmd () {
+  pandoc $1 | lynx -stdin
+}
+
+function makegif () {
+  ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > ${2:-output.gif}
+}

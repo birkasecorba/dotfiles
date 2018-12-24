@@ -1,6 +1,8 @@
-[include]
-  # For username / creds / etc
-  path = ~/.gitconfig.private
+[includeIf "gitdir:~/Code/Personal"]
+  path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/Code/Work"]
+  path = ~/.gitconfig-work
 
 [color]
     ui = auto
