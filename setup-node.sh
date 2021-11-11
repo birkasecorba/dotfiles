@@ -13,15 +13,3 @@ reload
 
 # install the latest longtermsupport version of node
 nvm install --lts
-
-brew install yarn --without-node
-
-# Node required CLIs
-npm install webpack -g
-npm install svgo -g
-npm install imageoptim-cli -g
-npm install eslint -g
-npm install -g eslint-config-airbnb
-npm install -g eslint-plugin-jsx-a11y
-npm install -g eslint-plugin-import
-npm install -g eslint-plugin-react

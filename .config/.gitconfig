@@ -1,9 +1,3 @@
-[include]
-  path = ~/.gitconfig-personal
-
-[includeIf "gitdir:~/Code/Work/"]
-  path = ~/.gitconfig-work
-
 [color]
     ui = auto
 
