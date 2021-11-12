@@ -4,7 +4,7 @@
 ~/.dotfiles/prune-symlinks.sh ${HOME}
 
 # finds all .dotfiles in this folder
-declare -a FILES_TO_SYMLINK=$(find ~/.dotfiles/.config -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .config | sed -e 's|//|/|' | sed -e 's|./.|.|')
+declare -a FILES_TO_SYMLINK=$(find ~/.dotfiles/.config -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .config)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -15,7 +15,7 @@ main() {
 
     for i in ${FILES_TO_SYMLINK[@]}; do
 
-        sourceFile="$(pwd)/$i"
+        sourceFile=$i
         targetFile="$HOME/$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
 
         if [ -e "$targetFile" ]; then
