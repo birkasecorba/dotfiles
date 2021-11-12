@@ -17,8 +17,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ~/.dotfiles/install.sh
 ```
 
-
-
 ## Usage
 Setup cronjob
 - `crontab crontab`
