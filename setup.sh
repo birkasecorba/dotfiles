@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 # Determine OS platform
 UNAME=$(uname | tr "[:upper:]" "[:lower:]") # "darwin" | "linux"
 
