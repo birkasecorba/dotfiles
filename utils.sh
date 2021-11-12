@@ -51,7 +51,3 @@ print_success() {
     printf "\e[0;32m  [✔] $1\e[0m\n"
 }
 
-
-
-
-
