@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-~/.dotfiles/utils.sh
+. ~/.dotfiles/utils.sh
 ~/.dotfiles/prune-symlinks.sh ${HOME}
 
 # finds all .dotfiles in this folder
