@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-. utils.sh
-. prune-symlinks.sh ${HOME}
+~/.config/utils.sh
+~/.config/prune-symlinks.sh ${HOME}
 
 # finds all .dotfiles in this folder
 declare -a FILES_TO_SYMLINK=$(find ./.config -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .config | sed -e 's|//|/|' | sed -e 's|./.|.|')
