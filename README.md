@@ -1,20 +1,14 @@
 # dotfiles
 My configurations. Use at your own risk.
 
-## Download
+## Download & Setup
 ```sh
-mkdir ~/.dotfiles && curl -#L https://github.com/birkasecorba/dotfiles/tarball/master | tar -xzv --exclude=README.md -C ~/.dotfiles --strip-components=1
+mkdir ~/.dotfiles && \
+curl -#L https://github.com/birkasecorba/dotfiles/tarball/master | tar -xzv --exclude=README.md -C ~/.dotfiles --strip-components=1 && \
+find ~/.dotfiles -type f -name '*.sh' -exec chmod +x {} \; && \
+~/.dotfiles/setup.sh
 ```
 
 ## Usage
-Make sure all bash files are executable, rename the folder to `.dotfiles` and move it under your home directory.
-```bash
-cd ~/.dotfiles
-find . -type f -name '*.sh' -exec chmod +x {} \;
-```
-
-To prune and setup new symlinks
-- `./setup-symlinks.sh`
-
 Setup cronjob
 - `crontab crontab`

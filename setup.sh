@@ -1,4 +1,4 @@
-echo $(uname | tr "[:upper:]" "[:lower:]")
+#!/bin/sh
 # Determine OS platform
 UNAME=$(uname | tr "[:upper:]" "[:lower:]") # "darwin" | "linux"
 
@@ -27,6 +27,6 @@ fi
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-./setup-symlinks.sh
+~/.dotfiles/setup-symlinks.sh
 unset UNAME
 unset DISTRO
