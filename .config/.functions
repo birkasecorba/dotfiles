@@ -39,3 +39,7 @@ function fs() {
 function makegif () {
   ffmpeg -i $1 -filter:v scale=720:-1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=10 > ${2:-output.gif}
 }
+
+function sync_vscode_extensions () {
+  rsync -az .vscode/extensions/ root@volkan.dev:../var/lib/code-server/extensions
+}

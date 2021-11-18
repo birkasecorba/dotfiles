@@ -37,6 +37,13 @@ main() {
         fi
 
     done
+
+    if [ -d "/etc/cron.d" ]; then
+        ln -fs ~/.cron/hourly.sh /etc/cron.hourly/
+        ln -fs ~/.cron/daily.sh /etc/cron.daily/
+        ln -fs ~/.cron/weekly.sh /etc/cron.weekly/
+        ln -fs ~/.cron/monthly.sh /etc/cron.monthly/
+    fi
 }
 
 main
